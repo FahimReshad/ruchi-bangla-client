@@ -114,17 +114,17 @@ const Login = () => {
               onClick={handleGoogleSignIn}
               className="mx-auto flex h-[50px] w-[200px] items-center overflow-hidden rounded-full shadow-md duration-300 hover:scale-95 hover:shadow"
             >
-              <div className="flex h-full w-[50%] items-center bg-[#dd5903] pl-4 text-sm text-white">
+              <div className="flex h-full w-[50%] items-center bg-[#dd5903] pl-4 text-sm text-white font-semibold">
                 Sign With
               </div>
               <span className="right-0 top-0 h-0 w-0 -rotate-90 border-b-[50px] border-r-[50px] border-b-transparent border-r-[#dd5903] group-hover:hidden"></span>
-              <span className="pr-4 text-4xl font-bold text-white">G+</span>
+              <span className="pr-4 text-4xl font-bold text-[#dd5903] ">G+</span>
             </div>
             <div
               onClick={handleFacebookSignIn}
               className="mx-auto flex h-[50px] w-[200px] items-center overflow-hidden rounded-full shadow-md duration-300 hover:scale-95 hover:shadow"
             >
-              <div className="flex h-full w-[50%] items-center bg-[#dd5903] pl-4 text-sm text-white hover:cursor-pointer">
+              <div className="flex h-full w-[50%] items-center bg-[#dd5903] pl-4 text-sm text-white hover:cursor-pointer font-semibold">
                 Sign With
               </div>
               <span className="right-0 top-0 h-0 w-0 -rotate-90 border-b-[50px] border-r-[50px] border-b-transparent border-r-[#dd5903] group-hover:hidden"></span>

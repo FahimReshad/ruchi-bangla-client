@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { toast } from "react-toastify";
 
@@ -61,7 +61,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-300 md:py-4">
+    <div className="navbar bg-[#252525] md:py-4 lg:px-10">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -88,16 +88,16 @@ const Navbar = () => {
             <span className="px-3 flex flex-col gap-0">{buttonLink}</span>
           </ul>
         </div>
-        <a className="btn btn-ghost lg:text-3xl font-barlow text-[#dd5903]">
+        <Link to='/' className="bg-base-300 lg:text-4xl font-barlow font-bold text-[#dd5903]">
           Ruchi Bangla
-        </a>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="flex gap-6 px-1 text-2xl font-bold font-barlow">
           {navLink}
         </ul>
       </div>
-      <div className="navbar-end hidden lg:flex gap-5 lg:mr-10">
+      <div className="navbar-end hidden lg:flex gap-5">
         { user ?
           <button onClick={handleLogOut} className="btn bg-[#dd5903] text-white font-semibold text-lg">LogOut</button> :
         <NavLink
@@ -108,7 +108,7 @@ const Navbar = () => {
         </NavLink>}
         <NavLink
           to="/register"
-          className="btn bg-[#dd5903] text-white font-semibold text-lg"
+          className="btn bg-[#AD1A19] text-white font-semibold text-lg"
         >
           Register
         </NavLink>
