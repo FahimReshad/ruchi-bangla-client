@@ -1,0 +1,162 @@
+[
+    {
+        "name": "Aloo Bhorta",
+        "image": "https://i.ibb.co/G3x7StX/927c6a469d3226bc745010ca97090224.jpg",
+        "category": "Main Course",
+        "price": 8.99,
+        "quantity": 10,
+        "made_by": "Chef Aditi",
+        "origin": "Bangladesh",
+        "description": "Mashed potatoes mixed with mustard oil, green chilies, onions, and spices."
+      },
+      {
+        "name": "Bengali Style Mutton Kosha",
+        "image": "https://i.ibb.co/KmZzM9z/images-q-tbn-ANd9-Gc-QCe-Lx-Vx-IH0w1-Wp-Pc5-ru-E5-LRXHYT2m2-s-Zsof2ln-Js-Fg-s.jpg",
+        "category": "Main Course",
+        "price": 16.99,
+        "quantity": 16,
+        "made_by": "Chef Ishaan",
+        "origin": "Bangladesh",
+        "description": "Tender mutton pieces cooked in a thick and spicy gravy, flavored with garam masala and bay leaves."
+      },
+      {
+        "name": "Bhapa Ilish",
+        "image": "https://i.ibb.co/Pw2dqh9/Ilish-Bhapa-Shorshe.jpg",
+        "category": "Main Course",
+        "price": 18.99,
+        "quantity": 12,
+        "made_by": "Chef Dia",
+        "origin": "Bangladesh",
+        "description": "Hilsa fish marinated with mustard paste, green chilies, and spices, then steamed to perfection."
+      },
+      {
+        "name": "Cholar Dal",
+        "image": "https://i.ibb.co/RgqcMTB/bengali-cholar-dal-recipe.jpg",
+        "category": "Main Course",
+        "price": 9.99,
+        "quantity": 12,
+        "made_by": "Chef Kabir",
+        "origin": "Bangladesh",
+        "description": "Bengali-style chana dal cooked with coconut, raisins, and spices."
+      },
+      {
+        "name": "Bhetki Paturi",
+        "image": "https://i.ibb.co/6JQbVfV/Bhetki-Macher-Paturi-Barramundi-Fish-Wrapped-in-Banana-Leaf-original-3-400.jpg",
+        "category": "Main Course",
+        "price": 17.99,
+        "quantity": 16,
+        "made_by": "Chef Raina",
+        "origin": "Bangladesh",
+        "description": "Bhetki fish marinated in mustard paste, wrapped in banana leaves, and steamed to perfection."
+      },
+      {
+        "name": "Bengali Ghugni",
+        "image": "https://i.ibb.co/yBp4Vbf/64907c6bb7f00471c7b04d49-Ghugni-Hero-1-1.jpg",
+        "category": "Appetizers",
+        "price": 7.99,
+        "quantity": 14,
+        "made_by": "Chef Avik",
+        "origin": "Bangladesh",
+        "description": "Spicy dried yellow peas curry, flavored with ginger, garlic, and spices."
+      },
+      {
+        "name": "Luchi Aloo Torkari",
+        "image": "https://i.ibb.co/WP8ctS7/images-q-tbn-ANd9-Gc-SIj0-Bbhjb29-BUD76imv-QZp-MSEUr-9mbm-RWJSg0im-Rdug-s.jpg",
+        "category": "Main Course",
+        "price": 10.99,
+        "quantity": 11,
+        "made_by": "Chef Riya",
+        "origin": "Bangladesh",
+        "description": "Deep-fried Bengali bread served with a spicy potato curry."
+      },
+      {
+        "name": "Bengali Pulao",
+        "image": "https://i.ibb.co/XWJfRzC/bengali-vegetable-pulao-2-scaled.jpg",
+        "category": "Main Course",
+        "price": 11.99,
+        "quantity": 4,
+        "made_by": "Chef Neel",
+        "origin": "Bangladesh",
+        "description": "Fragrant rice dish cooked with vegetables, spices, and ghee."
+      },
+      {
+        "name": "Kolkata Kathi Roll",
+        "image": "https://i.ibb.co/qMFyNJt/Kolkata-kati-rolls-lead.jpg",
+        "category": "Appetizers",
+        "price": 9.99,
+        "quantity": 9,
+        "made_by": "Chef Veer",
+        "origin": "Bangladesh",
+        "description": "Flavorful street food from Kolkata, consisting of a spicy filling wrapped in a paratha."
+      },
+      {
+        "name": "Begun Pora",
+        "image": "https://i.ibb.co/NmH8RKW/Bengali-begun-pora-recipe-500x375.jpg",
+        "category": "Main Course",
+        "price": 8.99,
+        "quantity": 17,
+        "made_by": "Chef Aisha",
+        "origin": "Bangladesh",
+        "description": "Smoky mashed eggplant mixed with mustard oil, green chilies, and spices."
+      },
+      {
+        "name": "Chingri Macher Malai Curry",
+        "image": "https://i.ibb.co/swpRbrQ/images-q-tbn-ANd9-Gc-RYOSYku-Qu-Iw-D-jv6-RU5-Zlu-OHn-SB-93-VOPu-IQCRJj-ZIKg-s.jpg",
+        "category": "Main Course",
+        "price": 18.99,
+        "quantity": 18,
+        "made_by": "Chef Tara",
+        "origin": "Bangladesh",
+        "description": "Prawns cooked in a creamy coconut milk sauce with spices and aromatics."
+      },
+      {
+        "name": "Bengali Style Crab Curry",
+        "image": "https://i.ibb.co/gynCVfP/kakrar-jhal-10-1.jpg",
+        "category": "Main Course",
+        "price": 20.99,
+        "quantity": 15,
+        "made_by": "Chef Ananya",
+        "origin": "Bangladesh",
+        "description": "Crab cooked in a spicy and tangy tomato-based gravy, flavored with mustard oil and spices."
+      },
+      {
+        "name": "Bengali Chicken Rezala",
+        "image": "https://i.ibb.co/dKHprX8/Chicken-Rezala.jpg",
+        "category": "Main Course",
+        "price": 14.99,
+        "quantity": 4,
+        "made_by": "Chef Surya",
+        "origin": "Bangladesh",
+        "description": "Tender chicken pieces cooked in a rich and creamy yogurt-based gravy, flavored with aromatic spices."
+      },
+      {
+        "name": "Bengali Bhapa Doi",
+        "image": "https://i.ibb.co/tMznnHF/Bengali-Bhapa-Doi-Recipe-1.jpg",
+        "category": "Desserts",
+        "price": 6.99,
+        "quantity": 9,
+        "made_by": "Chef Kabir",
+        "origin": "Bangladesh",
+        "description": "Steamed yogurt pudding flavored with cardamom and topped with nuts."
+      },
+      {
+        "name": "Bengali Payesh",
+        "image": "https://i.ibb.co/hm4y46S/images-q-tbn-ANd9-Gc-Qp-Ps20robmf-LO3-Zs-UVbh-Su2-Flxs-Gjg-Mcu-B1-RIFEp0e-Tw-s.jpg",
+        "category": "Desserts",
+        "price": 7.99,
+        "quantity": 12,
+        "made_by": "Chef Arun",
+        "origin": "Bangladesh",
+        "description": "Creamy rice pudding flavored with cardamom and topped with nuts."
+      },
+      {
+        "name": "Bengali Egg Curry",
+        "image": "https://i.ibb.co/8cPqYxx/maxresdefault.jpg",
+        "category": "Main Course",
+        "price": 10.99,
+        "quantity": 7,
+        "made_by": "Chef Ishaan",
+        "origin": "Bangladesh",
+        "description": "Hard-boiled eggs cooked in a spicy and flavorful gravy, made with tomatoes, ginger, and spices."
+      }
+]

@@ -1,13 +1,21 @@
-import React from 'react';
+import { useLoaderData } from "react-router-dom";
+import AllFoodCards from "../../Components/AllFoodCards/AllFoodCards";
+import PageTitle from "./PageTitle/PageTitle";
 
 const AllFoods = () => {
-    return (
-        <div>
-            <h2>all foods</h2>
-            <div><img className='w-full lg:h-[500px] object-cover' src="https://i.ibb.co/r3fJJqP/360-F-294263329-1-Igvq-Ng-Dbhm-QNg-Dxkhl-W433u-OFu-IDar4.jpg" alt="" /></div>
-            <h1>All Food Pages</h1>
-        </div>
-    );
+    const allFoodData = useLoaderData();
+    console.log(allFoodData);
+  return (
+    <div>
+      <PageTitle></PageTitle>
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:container mx-auto mt-10">
+    {
+        allFoodData.map((foodData, idx) => <AllFoodCards key={idx}  foodData={foodData}></AllFoodCards>)
+        
+    }
+    </div>
+    </div>
+  );
 };
 
 export default AllFoods;

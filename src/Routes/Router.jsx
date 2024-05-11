@@ -6,6 +6,9 @@ import Gallery from "../Pages/Gallery/Gallery";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import SingleFoodPage from "../Pages/SingleFoodPage/SingleFoodPage";
+import PurchasePage from "../Pages/PurchasePage/PurchasePage";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +22,8 @@ const router = createBrowserRouter([
         },
         {
             path: '/allFoods',
-            element: <AllFoods></AllFoods>
+            element: <AllFoods></AllFoods>,
+            loader: () => fetch('http://localhost:5000/food')
         },
         {
             path: '/gallery',
@@ -32,6 +36,16 @@ const router = createBrowserRouter([
         {
             path: '/register',
             element: <Register></Register>
+        },
+        {
+            path: '/allFoods/:id',
+            element: <SingleFoodPage></SingleFoodPage>,
+            loader: ({params}) => fetch(`http://localhost:5000/food/${params.id}`)
+        },
+        {
+            path: '/purchase/:id',
+            element: <PrivateRoute><PurchasePage></PurchasePage></PrivateRoute>,
+            loader: ({params}) => fetch(`http://localhost:5000/food/${params.id}`)
         }
     ]
   },
