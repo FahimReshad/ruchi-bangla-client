@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { toast } from "react-toastify";
+import MyProfile from "../MyProfile/MyProfile";
 
 const Navbar = () => {
   const {user, logOut} = useContext(AuthContext)
@@ -98,8 +99,13 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end hidden lg:flex gap-5">
+        
         { user ?
-          <button onClick={handleLogOut} className="btn bg-[#dd5903] text-white font-semibold text-lg">LogOut</button> :
+          <div className="flex items-center justify-center gap-4">
+            <><MyProfile></MyProfile></> 
+            <button onClick={handleLogOut} className="btn bg-[#dd5903] text-white font-semibold text-lg">LogOut</button>
+          
+          </div>:
         <NavLink
           to="/login"
           className="btn bg-[#dd5903] text-white font-semibold text-lg"
