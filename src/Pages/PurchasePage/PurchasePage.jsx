@@ -7,7 +7,7 @@ import { useContext } from "react";
 const PurchasePage = () => {
   const purchaseData = useLoaderData();
   const { user } = useContext(AuthContext);
-  const { name, price } = purchaseData;
+  const { name, price, image, made_by } = purchaseData;
   const date = Date.now();
   const timeConvertSecond = date / 1000;
   const buyingDate = new Date(timeConvertSecond * 1000)
@@ -22,6 +22,9 @@ const PurchasePage = () => {
     const buyerName = form.buyerName.value;
     const buyerEmail = form.buyerEmail.value;
     const buyingDate = form.buyingDate.value;
+    const image = form.image.value;
+    const made_by = form.made_by.value;
+    const email = user.email;
     const purchaseData = {
       name,
       price,
@@ -29,6 +32,9 @@ const PurchasePage = () => {
       buyerName,
       buyerEmail,
       buyingDate,
+      email,
+      image,
+      made_by
     };
     console.log(purchaseData);
     fetch("http://localhost:5000/purchaseFood", {
@@ -125,6 +131,26 @@ const PurchasePage = () => {
             placeholder=".............."
             min={5}
             className="p-3 block w-full shadow-lg outline-none border-2 rounded-md border-dashed invalid:border-red-700 valid:border-[#AD1A19] text-white font-semibold"
+            readOnly
+          />
+          <input
+            id="password_"
+            type="tel"
+            name="image"
+            defaultValue={image}
+            placeholder=".............."
+            min={5}
+            className="p-3 w-full shadow-lg outline-none border-2 rounded-md border-dashed invalid:border-red-700 valid:border-[#AD1A19] text-white font-semibold hidden"
+            readOnly
+          />
+          <input
+            id="password_"
+            type="tel"
+            name="made_by"
+            defaultValue={made_by}
+            placeholder=".............."
+            min={5}
+            className="p-3 w-full shadow-lg outline-none border-2 rounded-md border-dashed invalid:border-red-700 valid:border-[#AD1A19] text-white font-semibold hidden"
             readOnly
           />
         </div>

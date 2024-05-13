@@ -18,8 +18,8 @@ const MyAddedFood = () => {
       <table className="min-w-[90%] shadow-md border mx-auto border-gray-100 mt-8">
         <thead>
           <tr className="bg-[#8F3034] text-white grid grid-cols-4">
-            <th className="py-4 px-6 text-lg text-left border-b">Image</th>
-            <th className="py-4 px-6 text-lg text-left border-b ">Item Name</th>
+            <th className="py-4 px-6 text-lg text-left border-b">Food Image</th>
+            <th className="py-4 px-6 text-lg text-left border-b ">Food Name</th>
             <th className="py-4 px-6 text-lg text-left border-b">Price</th>
             <th className="py-4 px-6 text-lg border-b text-end">Action</th>
           </tr>

@@ -18,7 +18,7 @@ const Navbar = () => {
     <>
       <li>
         <NavLink
-          className={({ isActive }) => (isActive ? "text-[#dd5903]" : "")}
+          className={({ isActive }) => (isActive ? "text-[#AD1A19]" : "")}
           to="/"
         >
           Home
@@ -26,7 +26,7 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          className={({ isActive }) => (isActive ? "text-[#dd5903]" : "")}
+          className={({ isActive }) => (isActive ? "text-[#AD1A19]" : "")}
           to="/allFoods"
         >
           All Foods
@@ -34,7 +34,7 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          className={({ isActive }) => (isActive ? "text-[#dd5903]" : "")}
+          className={({ isActive }) => (isActive ? "text-[#AD1A19]" : "")}
           to="/gallery"
         >
           Gallery
@@ -49,12 +49,12 @@ const Navbar = () => {
           >LogOut</NavLink> :
         <NavLink
           to="/login"
-          className={({ isActive }) => (isActive ? "text-[#dd5903]" : "")}
+          className={({ isActive }) => (isActive ? "text-[#AD1A19]" : "")}
         >
           Login
         </NavLink>}
       <NavLink
-        className={({ isActive }) => (isActive ? "text-[#dd5903]" : "")}
+        className={({ isActive }) => (isActive ? "text-[#AD1A19]" : "")}
         to="/register"
       >
         Register
@@ -89,7 +89,7 @@ const Navbar = () => {
             <span className="px-3 flex flex-col gap-0">{buttonLink}</span>
           </ul>
         </div>
-        <Link to='/' className="bg-base-300 lg:text-4xl font-barlow font-bold text-[#dd5903]">
+        <Link to='/' className="lg:text-4xl font-barlow font-bold text-[#AD1A19]">
           Ruchi Bangla
         </Link>
       </div>
@@ -103,12 +103,12 @@ const Navbar = () => {
         { user ?
           <div className="flex items-center justify-center gap-4">
             <><MyProfile></MyProfile></> 
-            <button onClick={handleLogOut} className="btn bg-[#dd5903] text-white font-semibold text-lg">LogOut</button>
+            <button onClick={handleLogOut} className="btn bg-[#AD1A19] text-white font-semibold text-lg">LogOut</button>
           
           </div>:
         <NavLink
           to="/login"
-          className="btn bg-[#dd5903] text-white font-semibold text-lg"
+          className="btn bg-[#AD1A19] text-white font-semibold text-lg"
         >
           Login
         </NavLink>}

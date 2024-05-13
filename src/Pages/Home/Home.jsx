@@ -1,9 +1,12 @@
-import React from 'react';
+
+import Banner from '../../Components/Banner/Banner';
+import TopFood from '../../Components/TopFoodSection/TopFood';
 
 const Home = () => {
     return (
         <div>
-            <h2>home</h2>
+            <Banner></Banner>
+            <TopFood></TopFood>
             
         </div>
     );
