@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { toast } from "react-toastify";
 import { FaFacebook } from "react-icons/fa";
+import axios from "axios";
 
 const Login = () => {
   const { signInUser, googleSignIn, facebookSignIn } = useContext(AuthContext);
@@ -18,12 +19,23 @@ const Login = () => {
     console.log(user);
     signInUser(email, password)
       .then((result) => {
-        if (result.user) {
-          console.log(result.user);
-          navigate(from);
-          toast.success("Login successfully");
-          return;
-        }
+        const loggedInUser = result.user;
+        console.log(loggedInUser);
+        const user = { email}
+        // get access token:
+        axios.post('http://localhost:5000/jwt', user, {withCredentials: true})
+        .then(res => {
+          console.log(res.data)
+          if(res.data.success) {
+            navigate(from);
+          }
+        })
+        // if (result.user) {
+        //   console.log(result.user);
+        //   navigate(from);
+        //   toast.success("Login successfully");
+        //   return;
+        // }
       })
       .catch(() =>
         toast.error("Your email and password do not match each other")
@@ -33,11 +45,24 @@ const Login = () => {
   const handleGoogleSignIn = () => {
     googleSignIn()
       .then((result) => {
-        console.log(result.user);
-        if (result.user) {
-          navigate(from);
-          toast.success("You login successfully");
-        }
+        const loggedInUser = result.user;
+        console.log(loggedInUser);
+        const user = { loggedInUser}
+        // get access token:
+        axios.post('http://localhost:5000/jwt', user, {withCredentials: true})
+        .then(res => {
+          console.log(res.data)
+          if(res.data.success) {
+            navigate(from);
+          }
+        })
+
+
+        // console.log(result.user);
+        // if (result.user) {
+        //   navigate(from);
+        //   toast.success("You login successfully");
+        // }
       })
       .catch((error) => {
         console.error(error);

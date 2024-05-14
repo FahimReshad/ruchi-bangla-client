@@ -1,7 +1,7 @@
 import axios from "axios";
 import {
-    FacebookAuthProvider,
-    GoogleAuthProvider,
+  FacebookAuthProvider,
+  GoogleAuthProvider,
   createUserWithEmailAndPassword,
   onAuthStateChanged,
   signInWithEmailAndPassword,
@@ -10,7 +10,6 @@ import {
 } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../Firebase/Firebase.config";
-
 
 export const AuthContext = createContext();
 const googleProvider = new GoogleAuthProvider();
@@ -53,23 +52,23 @@ const AuthProvider = ({ children }) => {
       console.log(currentUser);
       setLoading(false);
       // if user exist created a token:
-      // if (currentUser) {
-      //   axios
-      //     .post("http://localhost:5000/jwt", loggedUserEmail, {
-      //       withCredentials: true,
-      //     })
-      //     .then((res) => {
-      //       console.log("token response", res.data);
-      //     });
-      // } else {
-      //   axios
-      //     .post("http://localhost:5000/logout", loggedUserEmail, {
-      //       withCredentials: true,
-      //     })
-      //     .then((res) => {
-      //       console.log(res.data);
-      //     });
-      // }
+      if (currentUser) {
+        axios
+          .post("http://localhost:5000/jwt", loggedUserEmail, {
+            withCredentials: true,
+          })
+          .then((res) => {
+            console.log("token response", res.data);
+          });
+      } else {
+        axios
+          .post("http://localhost:5000/logout", loggedUserEmail, {
+            withCredentials: true,
+          })
+          .then((res) => {
+            console.log(res.data);
+          });
+      }
     });
     return () => {
       unSubscribe();
