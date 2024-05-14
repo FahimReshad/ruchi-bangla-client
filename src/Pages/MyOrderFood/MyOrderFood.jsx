@@ -6,7 +6,9 @@ const MyOrderFood = () => {
   const { user } = useContext(AuthContext);
   const [myFoods, setMyFoods] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/purchaseFood/${user?.email}`
+    fetch(`http://localhost:5000/purchaseFood/${user?.email}`, {
+      credentials: "include"
+    }
     )
       .then((res) => res.json())
       .then((data) => {
@@ -29,9 +31,13 @@ const MyOrderFood = () => {
         </thead>
       </table>
       <div>
-        {myFoods.map((myFood) => (
-          <MyOrderFoodCard key={myFood._id} myFood={myFood} myFoods={myFoods} setMyFoods={setMyFoods}></MyOrderFoodCard>
-        ))}
+        {Array.isArray(myFoods) && myFoods.length > 0 ? (
+          myFoods.map((myFood) => (
+            <MyOrderFoodCard key={myFood._id} myFood={myFood} myFoods={myFoods} setMyFoods={setMyFoods}></MyOrderFoodCard>
+          ))
+        ) : (
+          <p>No data available</p>
+        )}
       </div>
     </>
   );
