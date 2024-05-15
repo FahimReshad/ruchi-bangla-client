@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
 
-
 const PageTitle = () => {
-    return (
-        <div className="relative">
+  return (
+    <div className="relative">
       <img
         className="w-full lg:h-[500px] object-cover opacity-55"
         src="https://i.ibb.co/r3fJJqP/360-F-294263329-1-Igvq-Ng-Dbhm-QNg-Dxkhl-W433u-OFu-IDar4.jpg"
@@ -16,7 +15,7 @@ const PageTitle = () => {
         </p>
       </div>
     </div>
-    );
+  );
 };
 
 export default PageTitle;
