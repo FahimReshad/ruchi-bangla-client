@@ -1,12 +1,14 @@
 import { Link, useLoaderData } from "react-router-dom";
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 const SingleFoodPage = () => {
   const foodData = useLoaderData();
-  const {_id, name, image, price, category, made_by, origin, description } =
+  const { _id, name, image, price, category, made_by, origin, description } =
     foodData;
   return (
     <div>
-      <Helmet><title>Ruchi Bangla || SingleFood</title></Helmet>
+      <Helmet>
+        <title>Ruchi Bangla || SingleFood</title>
+      </Helmet>
       <div className="container mx-auto space-y-6 rounded-2xl px-6 py-4 shadow-md ">
         {/* Card Image */}
         <img

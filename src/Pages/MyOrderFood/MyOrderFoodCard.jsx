@@ -1,4 +1,4 @@
-
+/* eslint-disable react/prop-types */
 
 import { Link } from "react-router-dom";
 
@@ -19,7 +19,7 @@ const MyOrderFoodCard = ({ myFood, myFoods, setMyFoods }) => {
           }
         });
     }
-  }
+  };
   return (
     <div className="overflow-x-auto">
       <table className="md:w-[90%] shadow-md border mx-auto border-gray-100">
@@ -34,7 +34,10 @@ const MyOrderFoodCard = ({ myFood, myFoods, setMyFoods }) => {
             <td className="py-4 px-6  text-lg font-medium">{buyingDate}</td>
             <td className="py-4 px-6 text-end">
               <Link>
-                <button onClick={() => handleDeleteOrderFood(_id)} className="bg-[#8F3034] hover:scale-110 scale-100 transition-all duration-100 text-white py-2 px-4 rounded-md">
+                <button
+                  onClick={() => handleDeleteOrderFood(_id)}
+                  className="bg-[#8F3034] hover:scale-110 scale-100 transition-all duration-100 text-white py-2 px-4 rounded-md"
+                >
                   X
                 </button>
               </Link>

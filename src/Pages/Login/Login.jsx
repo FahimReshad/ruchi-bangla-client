@@ -4,7 +4,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { toast } from "react-toastify";
 import { FaFacebook } from "react-icons/fa";
 import axios from "axios";
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 const Login = () => {
   const { signInUser, googleSignIn, facebookSignIn } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -17,15 +17,17 @@ const Login = () => {
     const password = form.password.value;
     signInUser(email, password)
       .then(() => {
-        const user = { email}
+        const user = { email };
         // get access token:
-        axios.post('https://ruchi-bangla-server.vercel.app/jwt', user, {withCredentials: true})
-        .then(res => {
-          if(res.data.success) {
-            navigate(from);
-          }
-        })
-       
+        axios
+          .post("https://ruchi-bangla-server.vercel.app/jwt", user, {
+            withCredentials: true,
+          })
+          .then((res) => {
+            if (res.data.success) {
+              navigate(from);
+            }
+          });
       })
       .catch(() =>
         toast.error("Your email and password do not match each other")
@@ -36,16 +38,17 @@ const Login = () => {
     googleSignIn()
       .then((result) => {
         const loggedInUser = result.user;
-        const user = { loggedInUser}
+        const user = { loggedInUser };
         // get access token:
-        axios.post('https://ruchi-bangla-server.vercel.app/jwt', user, {withCredentials: true})
-        .then(res => {
-          if(res.data.success) {
-            navigate(from);
-          }
-        })
-
-
+        axios
+          .post("https://ruchi-bangla-server.vercel.app/jwt", user, {
+            withCredentials: true,
+          })
+          .then((res) => {
+            if (res.data.success) {
+              navigate(from);
+            }
+          });
       })
       .catch((error) => {
         console.error(error);
@@ -63,12 +66,16 @@ const Login = () => {
       })
       .catch((error) => {
         console.log(error);
-        toast.error("Your email or number and password do not match each other")
+        toast.error(
+          "Your email or number and password do not match each other"
+        );
       });
   };
   return (
     <div className="flex lg:h-screen items-center justify-center bg-[#dd5903]/20 p-6 md:p-0">
-      <Helmet><title>Ruchi Bangla || Login</title></Helmet>
+      <Helmet>
+        <title>Ruchi Bangla || Login</title>
+      </Helmet>
       <div className="flex flex-col lg:flex-row h-full w-full overflow-hidden rounded-lg shadow-md  md:h-[90%] md:w-[80%] lg:h-[80%] items-center">
         {/* register design side  */}
         <div className="lg:w-1/2">
@@ -126,7 +133,9 @@ const Login = () => {
                 Sign With
               </div>
               <span className="right-0 top-0 h-0 w-0 -rotate-90 border-b-[50px] border-r-[50px] border-b-transparent border-r-[#dd5903] group-hover:hidden"></span>
-              <span className="pr-4 text-4xl font-bold text-[#dd5903] ">G+</span>
+              <span className="pr-4 text-4xl font-bold text-[#dd5903] ">
+                G+
+              </span>
             </div>
             <div
               onClick={handleFacebookSignIn}

@@ -1,13 +1,8 @@
-
-
-
-
-
-import {  useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { toast } from "react-toastify";
-import { useContext, useEffect, useState } from "react";
-import { Helmet } from 'react-helmet-async';
+import { useContext, useState } from "react";
+import { Helmet } from "react-helmet-async";
 const PurchasePage = () => {
   const purchaseData = useLoaderData();
   const { user } = useContext(AuthContext);
@@ -66,7 +61,9 @@ const PurchasePage = () => {
 
   return (
     <div className="lg:w-1/3 container mx-auto shadow-lg flex group text-[#AD1A19]">
-      <Helmet><title>Ruchi Bangla || Purchase Food</title></Helmet>
+      <Helmet>
+        <title>Ruchi Bangla || Purchase Food</title>
+      </Helmet>
       <form onSubmit={handlePurchase} className="p-8 flex-1">
         <h1 className="text-4xl pb-4 text-center font-bold font-barlow">
           Food Purchase
@@ -155,4 +152,3 @@ const PurchasePage = () => {
 };
 
 export default PurchasePage;
-

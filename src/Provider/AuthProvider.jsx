@@ -62,9 +62,13 @@ const AuthProvider = ({ children }) => {
           });
       } else {
         axios
-          .post("https://ruchi-bangla-server.vercel.app/logout", loggedUserEmail, {
-            withCredentials: true,
-          })
+          .post(
+            "https://ruchi-bangla-server.vercel.app/logout",
+            loggedUserEmail,
+            {
+              withCredentials: true,
+            }
+          )
           .then((res) => {
             console.log(res.data);
           });

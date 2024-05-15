@@ -1,17 +1,24 @@
-
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData } from "react-router-dom";
 
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
-import Swal from 'sweetalert2';
-import { Helmet } from 'react-helmet-async';
+import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 const UpdatedAddedFood = () => {
-    const food = useLoaderData();
-    const {_id, name, image, category, price, quantity, made_by, origin, description} = food;
+  const food = useLoaderData();
+  const {
+    _id,
+    name,
+    image,
+    category,
+    price,
+    quantity,
+    made_by,
+    origin,
+    description,
+  } = food;
 
-
-
-    const { user } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   const handleUpdatedFood = (e) => {
     e.preventDefault();
     const form = event.target;
@@ -35,7 +42,7 @@ const UpdatedAddedFood = () => {
       made_by,
       addedPersonEmail,
       origin,
-      email
+      email,
     };
     fetch(`https://ruchi-bangla-server.vercel.app/food/id/${_id}`, {
       method: "PUT",
@@ -47,22 +54,23 @@ const UpdatedAddedFood = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data) {
-            if (data.modifiedCount) {
-              Swal.fire({
-                title: "Success!",
-                text: "Food Item Updated Successfully",
-                icon: "success",
-                confirmButtonText: "Update",
-              });
-            }
+          if (data.modifiedCount) {
+            Swal.fire({
+              title: "Success!",
+              text: "Food Item Updated Successfully",
+              icon: "success",
+              confirmButtonText: "Update",
+            });
           }
+        }
       });
   };
 
-
-    return (
-        <div className="lg:w-1/3 container mx-auto shadow-lg flex group text-[#AD1A19]">
-            <Helmet><title>Ruchi Bangla || Updated Added Food</title></Helmet>
+  return (
+    <div className="lg:w-1/3 container mx-auto shadow-lg flex group text-[#AD1A19]">
+      <Helmet>
+        <title>Ruchi Bangla || Updated Added Food</title>
+      </Helmet>
       <form onSubmit={handleUpdatedFood} className="p-8 flex-1">
         <h1 className="text-4xl pb-4 text-center font-bold font-barlow">
           Update Food
@@ -77,7 +85,6 @@ const UpdatedAddedFood = () => {
             name="name"
             defaultValue={name}
             className="p-3 block w-full shadow-lg outline-none border-2 rounded-md border-dashed  invalid:border-red-700 valid:border-[#AD1A19] text-white font-semibold"
-            
           />
           <label htmlFor="email_" className="block">
             Food Image
@@ -88,7 +95,6 @@ const UpdatedAddedFood = () => {
             name="image"
             defaultValue={image}
             className="p-3 block w-full shadow-lg outline-none border-2 rounded-md border-dashed  invalid:border-red-700 valid:border-[#AD1A19] text-white font-semibold"
-            
           />
 
           <label htmlFor="email_" className="block">
@@ -172,7 +178,7 @@ const UpdatedAddedFood = () => {
         />
       </form>
     </div>
-    );
+  );
 };
 
 export default UpdatedAddedFood;

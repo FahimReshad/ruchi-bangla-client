@@ -71,10 +71,11 @@ const router = createBrowserRouter([
         element: <MyOrderFood></MyOrderFood>,
       },
       {
-        path: '/updatedFood/:id',
+        path: "/updatedFood/:id",
         element: <UpdatedAddedFood></UpdatedAddedFood>,
-        loader: ({params}) => fetch(`https://ruchi-bangla-server.vercel.app/food/id/${params.id}`)
-      }
+        loader: ({ params }) =>
+          fetch(`https://ruchi-bangla-server.vercel.app/food/id/${params.id}`),
+      },
     ],
   },
 ]);
