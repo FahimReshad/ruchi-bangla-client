@@ -5,14 +5,14 @@ import { toast } from "react-toastify";
 import MyProfile from "../MyProfile/MyProfile";
 
 const Navbar = () => {
-  const {user, logOut} = useContext(AuthContext)
+  const { user, logOut } = useContext(AuthContext);
   const handleLogOut = () => {
     logOut()
-    .then(() => {
-      toast.success('Log Out Successfully')
-    })
-    .catch(() => toast.error('SignOut Unsuccessful'))
-  }
+      .then(() => {
+        toast.success("Log Out Successfully");
+      })
+      .catch(() => toast.error("SignOut Unsuccessful"));
+  };
 
   const navLink = (
     <>
@@ -44,15 +44,16 @@ const Navbar = () => {
   );
   const buttonLink = (
     <>
-    { user ?
-          <NavLink onClick={handleLogOut}
-          >LogOut</NavLink> :
+      {user ? (
+        <NavLink onClick={handleLogOut}>LogOut</NavLink>
+      ) : (
         <NavLink
           to="/login"
           className={({ isActive }) => (isActive ? "text-[#AD1A19]" : "")}
         >
           Login
-        </NavLink>}
+        </NavLink>
+      )}
       <NavLink
         className={({ isActive }) => (isActive ? "text-[#AD1A19]" : "")}
         to="/register"
@@ -89,7 +90,10 @@ const Navbar = () => {
             <span className="px-3 flex flex-col gap-0">{buttonLink}</span>
           </ul>
         </div>
-        <Link to='/' className="lg:text-4xl font-barlow font-bold text-[#AD1A19]">
+        <Link
+          to="/"
+          className="lg:text-4xl font-barlow font-bold text-[#AD1A19]"
+        >
           Ruchi Bangla
         </Link>
       </div>
@@ -99,19 +103,26 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end hidden lg:flex gap-5">
-        
-        { user ?
+        {user ? (
           <div className="flex items-center justify-center gap-4">
-            <><MyProfile></MyProfile></> 
-            <button onClick={handleLogOut} className="btn bg-[#AD1A19] text-white font-semibold text-lg">LogOut</button>
-          
-          </div>:
-        <NavLink
-          to="/login"
-          className="btn bg-[#AD1A19] text-white font-semibold text-lg"
-        >
-          Login
-        </NavLink>}
+            <>
+              <MyProfile></MyProfile>
+            </>
+            <button
+              onClick={handleLogOut}
+              className="btn bg-[#AD1A19] text-white font-semibold text-lg"
+            >
+              LogOut
+            </button>
+          </div>
+        ) : (
+          <NavLink
+            to="/login"
+            className="btn bg-[#AD1A19] text-white font-semibold text-lg"
+          >
+            Login
+          </NavLink>
+        )}
         <NavLink
           to="/register"
           className="btn bg-[#AD1A19] text-white font-semibold text-lg"

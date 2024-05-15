@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { toast } from "react-toastify";
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 const AddFood = () => {
   const { user } = useContext(AuthContext);
   const handleAddFood = (e) => {
@@ -27,7 +27,7 @@ const AddFood = () => {
       made_by,
       addedPersonEmail,
       origin,
-      email
+      email,
     };
     fetch("https://ruchi-bangla-server.vercel.app/food", {
       method: "POST",
@@ -45,7 +45,9 @@ const AddFood = () => {
   };
   return (
     <div className="lg:w-1/3 container mx-auto shadow-lg flex group text-[#AD1A19]">
-      <Helmet><title>Ruchi Bangla || Add Food</title></Helmet>
+      <Helmet>
+        <title>Ruchi Bangla || Add Food</title>
+      </Helmet>
       <form onSubmit={handleAddFood} className="p-8 flex-1">
         <h1 className="text-4xl pb-4 text-center font-bold font-barlow">
           Add Food
