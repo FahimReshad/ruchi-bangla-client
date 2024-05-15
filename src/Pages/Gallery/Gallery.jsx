@@ -4,11 +4,14 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import GalleryCard from "./GalleryCard";
 import { toast } from "react-toastify";
 import GalleryCards from "./GalleryCards";
+import {  useLocation, useNavigate } from "react-router-dom";
 
 
 const Gallery = () => {
   const [openModal, setOpenModal] = useState(false);
-  const {user} = useContext(AuthContext)
+  const {user} = useContext(AuthContext);
+  const navigate = useNavigate();
+const location = useLocation();
 
   const handleGallery = (e) => {
     e.preventDefault();
@@ -48,6 +51,10 @@ const Gallery = () => {
     };
   }, [openModal]);
 
+  if(!user){
+    navigate('/login', {state: location.pathname})
+  }
+
 
   return (
     <div>
@@ -63,7 +70,9 @@ const Gallery = () => {
        </button>
        
      </div>
-      <GalleryCards handleGallery={handleGallery} openModal={openModal} setOpenModal={setOpenModal} user={user}></GalleryCards>
+      <div>
+       <GalleryCards handleGallery={handleGallery} openModal={openModal} setOpenModal={setOpenModal} user={user}></GalleryCards> : 
+      </div>
       
      
       <GalleryCard></GalleryCard>

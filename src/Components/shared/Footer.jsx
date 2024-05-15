@@ -4,15 +4,16 @@ import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 const Footer = () => {
     return (
-        <footer className="px-4 divide-y bg-base-200 dark:text-white mt-14">
+        <footer className="px-4 divide-y bg-base-200 dark:text-white mt-14 lg:py-20">
 	<div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
-		<div className="lg:w-1/3">
-			<a rel="noopener noreferrer" href="#" className="flex justify-center space-x-3 lg:justify-start">
+		<div className="lg:w-[20%]">
+			<a rel="noopener noreferrer" href="#" className="">
 				
-				<span className="self-center text-3xl font-bold font-lora text-[#8F3034]">Ruchi Bangla</span>
+				<h2 className="lg:-ml-10 text-3xl font-bold text-[#8F3034]">Ruchi Bangla</h2>
+				<p className='text-lg text-[#C6C6C6] lg:-ml-10 mt-4 font-barlow'>Discover authentic Bangladeshi recipes and culinary inspiration at Ruchi Bangla.</p>
 			</a>
 		</div>
-		<div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 w-full lg:w-2/3 lg:grid-cols-4 font-semibold">
+		<div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 w-full lg:w-2/3 lg:grid-cols-4 font-semibold lg:mr-40">
 			<div className="space-y-3">
 				<h3 className="tracking-wide uppercase text-white font-black font-barlow text-3xl">Our Address</h3>
 				<ul className="space-y-1 text-lg text-[#C6C6C6]">
@@ -28,9 +29,9 @@ const Footer = () => {
 					</li>
 				</ul>
 			</div>
-			<div className="space-y-3">
-				<h3 className="tracking-wide uppercase text-white font-bold font-barlow text-xl">Company</h3>
-				<ul className="space-y-1">
+			<div className="space-y-3 lg:ml-20">
+				<h3 className="tracking-wide uppercase text-white font-black font-barlow text-3xl">Company</h3>
+				<ul className="space-y-1 text-lg text-[#C6C6C6]">
 					<li>
 						<a rel="noopener noreferrer" href="#">Privacy</a>
 					</li>
@@ -39,8 +40,36 @@ const Footer = () => {
 					</li>
 				</ul>
 			</div>
+			<div className="space-y-3 lg:ml-20 lg:w-[400px]">
+				<h3 className="tracking-wide uppercase text-white font-bold font-barlow text-3xl">Working Hours</h3>
+				<div className='flex gap-10'>
+				<ul className="space-y-1 text-lg text-[#C6C6C6]">
+					<li>
+						<a rel="noopener noreferrer" href="#">Monday - Friday</a>
+					</li>
+					<li>
+						<a rel="noopener noreferrer" href="#">Saturday</a>
+					</li>
+					<li>
+						<a rel="noopener noreferrer" href="#">Sunday</a>
+					</li>
+				</ul>
+				<ul className="space-y-1">
+					<li>
+						<a rel="noopener noreferrer" href="#">09:00 - 22:00</a>
+					</li>
+					<li>
+						<a rel="noopener noreferrer" href="#">
+11:00 - 00:00</a>
+					</li>
+					<li>
+						<a rel="noopener noreferrer" href="#">11:00 - 23:00</a>
+					</li>
+				</ul>
+				</div>
+			</div>
 			
-			<div className="space-y-3">
+			<div className="space-y-3 lg:ml-40 lg:w-[200px]">
 				<div className="uppercase text-white font-bold font-barlow text-xl">Social media</div>
 				<div className="flex justify-start space-x-3">
 					<a rel="noopener noreferrer" href="#" title="Facebook" className="flex items-center p-1">

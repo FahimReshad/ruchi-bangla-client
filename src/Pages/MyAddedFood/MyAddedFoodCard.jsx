@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 
 const MyAddedFoodCard = ({myFood}) => {
     const {name, image, price} = myFood;
+    const handleUpdateFood = () => {
+      
+    }
     return (
         <div className="overflow-x-auto">
       <table className="min-w-[90%] shadow-md border mx-auto border-gray-100">
@@ -14,8 +17,8 @@ const MyAddedFoodCard = ({myFood}) => {
             <td className="py-4 px-6 border-b text-xl font-medium">{name}</td>
             <td className="py-4 px-6 border-b text-lg font-medium">{price}</td>
             <td className="py-4 px-6 border-b text-end">
-              <Link >
-                <button className="bg-[#8F3034] hover:scale-110 scale-100 transition-all duration-100 text-white py-2 px-4 rounded-md">
+              <Link>
+                <button onClick={handleUpdateFood} className="bg-[#8F3034] hover:scale-110 scale-100 transition-all duration-100 text-white py-2 px-4 rounded-md">
                   Update
                 </button>
               </Link>
