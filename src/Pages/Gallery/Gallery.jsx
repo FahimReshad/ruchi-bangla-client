@@ -5,7 +5,7 @@ import GalleryCard from "./GalleryCard";
 import { toast } from "react-toastify";
 import GalleryCards from "./GalleryCards";
 import {  useLocation, useNavigate } from "react-router-dom";
-
+import { Helmet } from 'react-helmet-async';
 
 const Gallery = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -58,13 +58,14 @@ const location = useLocation();
 
   return (
     <div>
+      <Helmet><title>Ruchi Bangla || Gallery</title></Helmet>
       <GalleryTitle />
       
-       <div className="w-1/2 mx-auto flex items-center justify-center">
+       <div className="w-1/2 mx-auto flex items-center justify-center mt-4">
        {/* Pay Button */}
        <button
          onClick={() => setOpenModal(true)}
-         className="bg-black text-white p-2 rounded-lg"
+         className="bg-red-700 font-bold text-white p-4 rounded-lg"
        >
          Add
        </button>

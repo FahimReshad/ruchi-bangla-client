@@ -2,7 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import AllFoodCards from "../../Components/AllFoodCards/AllFoodCards";
 import PageTitle from "./PageTitle/PageTitle";
 import { useState } from "react";
-import axios from "axios";
+import { Helmet } from 'react-helmet-async';
 
 const AllFoods = () => {
     const allFoodData = useLoaderData();
@@ -22,6 +22,7 @@ const AllFoods = () => {
     }
   return (
     <div>
+      <Helmet><title>Ruchi Bangla || All Foods</title></Helmet>
       <PageTitle></PageTitle>
       <div className="flex justify-center items-center mt-2 md:mt-8 lg:mt-14">
       <input value={searchFoods}

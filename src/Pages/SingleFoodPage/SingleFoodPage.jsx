@@ -1,5 +1,5 @@
 import { Link, useLoaderData } from "react-router-dom";
-
+import { Helmet } from 'react-helmet-async';
 const SingleFoodPage = () => {
   const foodData = useLoaderData();
   console.log(foodData);
@@ -7,20 +7,21 @@ const SingleFoodPage = () => {
     foodData;
   return (
     <div>
+      <Helmet><title>Ruchi Bangla || SingleFood</title></Helmet>
       <div className="container mx-auto space-y-6 rounded-2xl px-6 py-4 shadow-md ">
         {/* Card Image */}
         <img
-          className="h-[550px] w-full rounded-2xl"
+          className="lg:h-[650px] w-full rounded-2xl"
           src={image}
           alt="Image not found"
         />
         {/* Card Heading */}
-        <div className="space-y-2 flex items-center gap-16">
+        <div className=" flex items-center gap-16">
           <h2 className="text-slate-800 sm:text-lg md:text-4xl font-semibold font-barlow">
-            <span className="font-bold text-black">{name}</span>{" "}
+            <span className="font-bold text-white">{name}</span>{" "}
           </h2>
           <h3 className="text-slate-800 sm:text-lg md:text-4xl font-semibold font-barlow">
-            <span className="font-bold text-black">Category: {category}</span>{" "}
+            <span className="font-bold text-white">Category: {category}</span>{" "}
           </h3>
         </div>
         <div>

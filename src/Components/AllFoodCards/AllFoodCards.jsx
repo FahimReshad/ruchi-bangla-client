@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 const AllFoodCards = ({foodData}) => {
     const { _id, name, image, category, price, quantity} = foodData;
   return (
-    <div className=" mx-auto space-y-6 rounded-2xl bg-slate-100/70 px-6 py-4 shadow-md dark:bg-[#18181B] hover:scale-105 transform transition duration-300">
+    <div className=" space-y-6 rounded-2xl bg-slate-100/70 px-6 py-4 shadow-md dark:bg-[#18181B] hover:scale-105 transform transition duration-300">
       {/* Card Image */}
       <img
-        className="h-[250px] w-[450px] rounded-2xl bg-gray-400 object-cover"
+        className="h-[250px] w-full rounded-2xl bg-gray-400 object-cover"
         src={image}
         alt="card navigate ui"
       />

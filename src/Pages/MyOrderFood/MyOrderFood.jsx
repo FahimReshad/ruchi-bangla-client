@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import MyOrderFoodCard from "./MyOrderFoodCard";
-
+import { Helmet } from 'react-helmet-async';
 const MyOrderFood = () => {
   const { user } = useContext(AuthContext);
   const [myFoods, setMyFoods] = useState([]);
@@ -18,6 +18,7 @@ const MyOrderFood = () => {
   }, [user]);
   return (
     <>
+    <Helmet><title>Ruchi Bangla || My Ordered Food</title></Helmet>
       <table className="md:w-[90%] shadow-md border mx-auto border-gray-100 mt-8">
         <thead>
           <tr className="bg-[#8F3034] text-white grid grid-cols-6  ">

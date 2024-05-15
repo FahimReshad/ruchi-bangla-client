@@ -1,10 +1,10 @@
-import React from 'react';
+
 import { useLoaderData } from 'react-router-dom';
 
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from 'sweetalert2';
-
+import { Helmet } from 'react-helmet-async';
 const UpdatedAddedFood = () => {
     const food = useLoaderData();
     console.log(food);
@@ -65,6 +65,7 @@ const UpdatedAddedFood = () => {
 
     return (
         <div className="lg:w-1/3 container mx-auto shadow-lg flex group text-[#AD1A19]">
+            <Helmet><title>Ruchi Bangla || Updated Added Food</title></Helmet>
       <form onSubmit={handleUpdatedFood} className="p-8 flex-1">
         <h1 className="text-4xl pb-4 text-center font-bold font-barlow">
           Update Food

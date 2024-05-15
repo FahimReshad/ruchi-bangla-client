@@ -4,7 +4,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { toast } from "react-toastify";
 import { FaFacebook } from "react-icons/fa";
 import axios from "axios";
-
+import { Helmet } from 'react-helmet-async';
 const Login = () => {
   const { signInUser, googleSignIn, facebookSignIn } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -86,6 +86,7 @@ const Login = () => {
   };
   return (
     <div className="flex lg:h-screen items-center justify-center bg-[#dd5903]/20 p-6 md:p-0">
+      <Helmet><title>Ruchi Bangla || Login</title></Helmet>
       <div className="flex flex-col lg:flex-row h-full w-full overflow-hidden rounded-lg shadow-md  md:h-[90%] md:w-[80%] lg:h-[80%] items-center">
         {/* register design side  */}
         <div className="lg:w-1/2">

@@ -10,22 +10,22 @@ const Banner = () => {
       des: "There are many variations of passages of  available, but the majority have suffered alteration in some form.",
     },
     {
-      img: "https://i.ibb.co/HtF1XRk/2.jpg",
+      img: "https://i.ibb.co/yVpRbq3/images-q-tbn-ANd9-Gc-TXy-Roo-ZQRc-ZPUdz-Il-MMa-ZMwdob-Il-Z9dshyh-FRSAyuh-Ug-s.jpg",
       title: "Escape 2",
       des: "A Symphony of Tranquility. Experience the perfect blend of relaxation and excitement.",
     },
     {
-      img: "https://i.ibb.co/FVNywwN/3.jpg",
+      img: "https://i.ibb.co/xg3mR6b/greek-salmon-bowl-f681500cbe054bb1adb607ff55094075.jpg",
       title: "Escape 3",
       des: "A Symphony of Tranquility. Experience the perfect blend of relaxation and excitement.",
     },
     {
-      img: "https://i.ibb.co/5FNfhHP/4.jpg",
+      img: "https://i.ibb.co/rvtLYSV/image.jpg",
       title: "Escape 4",
       des: "A Symphony of Tranquility. Experience the perfect blend of relaxation and excitement.",
     },
     {
-      img: "https://i.ibb.co/LPLvDqq/5.jpg",
+      img: "https://i.ibb.co/x8820n1/article-7866255-foods-you-should-eat-every-week-to-lose-weight-04-d58e9c481bce4a29b47295baade4072d.jpg",
       title: "Escape 5",
       des: "A Symphony of Tranquility. Experience the perfect blend of relaxation and excitement.",
     },

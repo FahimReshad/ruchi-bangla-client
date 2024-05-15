@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { toast } from 'react-toastify';
-
+import { Helmet } from 'react-helmet-async';
 const Register = () => {
     const {createUser} = useContext(AuthContext);
     console.log(createUser);
@@ -28,6 +28,7 @@ const Register = () => {
     }
     return (
         <div className="hero min-h-screen bg-[#dd5903]/20 ">
+          <Helmet><title>Ruchi Bangla || Register</title></Helmet>
         <div className="hero-content flex-col lg:flex-row w-full">
           <div className="w-full">
             <img className="w-full" src="https://i.ibb.co/hM17dpn/cloud-computing-modern-flat-concept-for-web-banner-design-man-enters-password-and-login-to-access-cl.png" alt="" />
