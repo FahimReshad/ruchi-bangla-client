@@ -6,10 +6,9 @@ const MyAddedFood = () => {
     const {user} = useContext(AuthContext);
     const [myFoods, setMyFoods] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/food/email/${user?.email}`)
+        fetch(`https://ruchi-bangla-server.vercel.app/food/email/${user?.email}`)
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             setMyFoods(data)
         })
     }, [user])

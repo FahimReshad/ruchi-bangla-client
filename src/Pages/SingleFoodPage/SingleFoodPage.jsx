@@ -2,7 +2,6 @@ import { Link, useLoaderData } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
 const SingleFoodPage = () => {
   const foodData = useLoaderData();
-  console.log(foodData);
   const {_id, name, image, price, category, made_by, origin, description } =
     foodData;
   return (

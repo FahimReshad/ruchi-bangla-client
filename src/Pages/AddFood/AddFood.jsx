@@ -29,8 +29,7 @@ const AddFood = () => {
       origin,
       email
     };
-    console.log(purchaseData);
-    fetch("http://localhost:5000/food", {
+    fetch("https://ruchi-bangla-server.vercel.app/food", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -39,7 +38,6 @@ const AddFood = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data) {
           toast.success("Your food added successfully");
         }

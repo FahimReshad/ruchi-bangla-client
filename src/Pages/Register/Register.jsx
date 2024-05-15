@@ -5,7 +5,6 @@ import { toast } from 'react-toastify';
 import { Helmet } from 'react-helmet-async';
 const Register = () => {
     const {createUser} = useContext(AuthContext);
-    console.log(createUser);
     const navigate = useNavigate();
     const handleRegister = e => {
         e.preventDefault();
@@ -14,11 +13,10 @@ const Register = () => {
         const email = form.email.value;
         const photoURL = form.photoURL.value;
         const password = form.password.value;
-        const user = {name, email, photoURL, password};
-        console.log(user);
+
+   
         createUser(email, password)
         .then(result => {
-            console.log(result.user);
             if(result.user){
                 navigate('/')
                 toast.success('Registration Successfully')

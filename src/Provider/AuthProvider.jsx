@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import axios from "axios";
 import {
   FacebookAuthProvider,
@@ -49,12 +50,11 @@ const AuthProvider = ({ children }) => {
       const userEmail = currentUser?.email;
       const loggedUserEmail = { email: userEmail };
       setUser(currentUser);
-      console.log(currentUser);
       setLoading(false);
       // if user exist created a token:
       if (currentUser) {
         axios
-          .post("http://localhost:5000/jwt", loggedUserEmail, {
+          .post("https://ruchi-bangla-server.vercel.app/jwt", loggedUserEmail, {
             withCredentials: true,
           })
           .then((res) => {
@@ -62,7 +62,7 @@ const AuthProvider = ({ children }) => {
           });
       } else {
         axios
-          .post("http://localhost:5000/logout", loggedUserEmail, {
+          .post("https://ruchi-bangla-server.vercel.app/logout", loggedUserEmail, {
             withCredentials: true,
           })
           .then((res) => {

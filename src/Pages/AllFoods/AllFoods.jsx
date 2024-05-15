@@ -6,16 +6,13 @@ import { Helmet } from 'react-helmet-async';
 
 const AllFoods = () => {
     const allFoodData = useLoaderData();
-    // const {name} = allFoodData;
     const [searchFoods, setSearchFoods] = useState('');
-    console.log(searchFoods);
+  
     const [searchResults, setSearchResults] = useState([]);
     const handleSearchFoods = () => {
-      console.log('got it');
-      fetch(`http://localhost:5000/food/search/${searchFoods}`)
+      fetch(`https://ruchi-bangla-server.vercel.app/food/search/${searchFoods}`)
       .then(res => res.json())
       .then(data => {
-        console.log(data);
         setSearchResults(data);
       })
       

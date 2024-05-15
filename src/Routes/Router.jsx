@@ -28,7 +28,7 @@ const router = createBrowserRouter([
       {
         path: "/allFoods",
         element: <AllFoods></AllFoods>,
-        loader: () => fetch("http://localhost:5000/food"),
+        loader: () => fetch("https://ruchi-bangla-server.vercel.app/food"),
       },
       {
         path: "/gallery",
@@ -46,7 +46,7 @@ const router = createBrowserRouter([
         path: "/allFoods/:id",
         element: <SingleFoodPage></SingleFoodPage>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/food/id/${params.id}`),
+          fetch(`https://ruchi-bangla-server.vercel.app/food/id/${params.id}`),
       },
       {
         path: "/purchase/:id",
@@ -56,7 +56,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/food/id/${params.id}`),
+          fetch(`https://ruchi-bangla-server.vercel.app/food/id/${params.id}`),
       },
       {
         path: "/myAddedFood",
@@ -73,7 +73,7 @@ const router = createBrowserRouter([
       {
         path: '/updatedFood/:id',
         element: <UpdatedAddedFood></UpdatedAddedFood>,
-        loader: ({params}) => fetch(`http://localhost:5000/food/id/${params.id}`)
+        loader: ({params}) => fetch(`https://ruchi-bangla-server.vercel.app/food/id/${params.id}`)
       }
     ],
   },

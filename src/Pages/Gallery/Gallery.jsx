@@ -9,7 +9,7 @@ import { Helmet } from 'react-helmet-async';
 
 const Gallery = () => {
   const [openModal, setOpenModal] = useState(false);
-  const {user} = useContext(AuthContext);
+  const {user, loading} = useContext(AuthContext);
   const navigate = useNavigate();
 const location = useLocation();
 
@@ -20,9 +20,8 @@ const location = useLocation();
     const feedback = form.feedback.value;
     const image = form.imageURL.value;  
     const gallery = {name, feedback, image}
-    console.log(name, feedback, image);
     
-    fetch("http://localhost:5000/gallery", {
+    fetch("https://ruchi-bangla-server.vercel.app/gallery", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -31,7 +30,6 @@ const location = useLocation();
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if(data){
           toast.success('Thank you for your feedback')
         }
@@ -54,6 +52,17 @@ const location = useLocation();
   if(!user){
     navigate('/login', {state: location.pathname})
   }
+
+  if (loading) {
+    return <div className="w-10 h-10">
+       <div className="grid grid-cols-2 justify-center items-center gap-2 rounded-full">
+         <span className="h-5 w-5 rounded-tl-full bg-blue-500 animate-[ping_1.4s_linear_infinite]"></span>{" "}
+         <span className="h-5 w-5 rounded-tr-full bg-blue-500 animate-[ping_1.8s_linear_infinite]"></span>
+         <span className="h-5 w-5 rounded-bl-full bg-blue-500 animate-[ping_2.2s_linear_infinite]"></span>
+         <span className="h-5 w-5 rounded-br-full bg-blue-500 animate-[ping_2.6s_linear_infinite]"></span>
+       </div>
+     </div>;
+   }
 
 
   return (

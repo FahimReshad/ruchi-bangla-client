@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Banner = () => {
@@ -117,9 +117,11 @@ const Banner = () => {
           delights that await you!
         </p>
         <div className="flex gap-6 mt-3 lg:mt-8">
-          <Link to='/allFoods'><button className="btn bg-[#AD1A19] border-[#AD1A19] hover:bg-[#AD1A19CC] text-white font-semibold">
-           See All Foods
-          </button></Link>
+          <Link to="/allFoods">
+            <button className="btn bg-[#AD1A19] border-[#AD1A19] hover:bg-[#AD1A19CC] text-white font-semibold">
+              See All Foods
+            </button>
+          </Link>
         </div>
       </div>
       {/* slider container */}

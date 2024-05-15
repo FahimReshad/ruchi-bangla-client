@@ -5,10 +5,9 @@ import { Link } from 'react-router-dom';
 const TopFood = () => {
     const [showTopFood, setShowTopFood] = useState([]);
     useEffect( () => {
-        fetch('http://localhost:5000/topSellingFoods')
+        fetch('https://ruchi-bangla-server.vercel.app/topSellingFoods')
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             setShowTopFood(data);
         })
     }, [])

@@ -7,7 +7,6 @@ import Swal from 'sweetalert2';
 import { Helmet } from 'react-helmet-async';
 const UpdatedAddedFood = () => {
     const food = useLoaderData();
-    console.log(food);
     const {_id, name, image, category, price, quantity, made_by, origin, description} = food;
 
 
@@ -38,8 +37,7 @@ const UpdatedAddedFood = () => {
       origin,
       email
     };
-    console.log(updatedData);
-    fetch(`http://localhost:5000/food/id/${_id}`, {
+    fetch(`https://ruchi-bangla-server.vercel.app/food/id/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -48,7 +46,6 @@ const UpdatedAddedFood = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data) {
             if (data.modifiedCount) {
               Swal.fire({

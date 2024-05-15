@@ -7,12 +7,11 @@ const MyOrderFoodCard = ({ myFood, myFoods, setMyFoods }) => {
   const handleDeleteOrderFood = (id) => {
     const proceed = confirm("Are you sure you want to delete");
     if (proceed) {
-      fetch(`http://localhost:5000/purchaseFood/${id}`, {
+      fetch(`https://ruchi-bangla-server.vercel.app/purchaseFood/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
           if (data.deletedCount > 0) {
             alert("deleted successfully");
             const remaining = myFoods.filter((booking) => booking._id !== id);

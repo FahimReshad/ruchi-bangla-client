@@ -15,27 +15,17 @@ const Login = () => {
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-    const user = { email, password };
-    console.log(user);
     signInUser(email, password)
-      .then((result) => {
-        const loggedInUser = result.user;
-        console.log(loggedInUser);
+      .then(() => {
         const user = { email}
         // get access token:
-        axios.post('http://localhost:5000/jwt', user, {withCredentials: true})
+        axios.post('https://ruchi-bangla-server.vercel.app/jwt', user, {withCredentials: true})
         .then(res => {
-          console.log(res.data)
           if(res.data.success) {
             navigate(from);
           }
         })
-        // if (result.user) {
-        //   console.log(result.user);
-        //   navigate(from);
-        //   toast.success("Login successfully");
-        //   return;
-        // }
+       
       })
       .catch(() =>
         toast.error("Your email and password do not match each other")
@@ -46,23 +36,16 @@ const Login = () => {
     googleSignIn()
       .then((result) => {
         const loggedInUser = result.user;
-        console.log(loggedInUser);
         const user = { loggedInUser}
         // get access token:
-        axios.post('http://localhost:5000/jwt', user, {withCredentials: true})
+        axios.post('https://ruchi-bangla-server.vercel.app/jwt', user, {withCredentials: true})
         .then(res => {
-          console.log(res.data)
           if(res.data.success) {
             navigate(from);
           }
         })
 
 
-        // console.log(result.user);
-        // if (result.user) {
-        //   navigate(from);
-        //   toast.success("You login successfully");
-        // }
       })
       .catch((error) => {
         console.error(error);
@@ -73,7 +56,6 @@ const Login = () => {
   const handleFacebookSignIn = () => {
     facebookSignIn()
       .then((result) => {
-        console.log(result);
         if (result.user) {
           navigate(from);
           toast.success("You login successfully");

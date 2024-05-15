@@ -10,7 +10,6 @@ import { useContext, useEffect, useState } from "react";
 import { Helmet } from 'react-helmet-async';
 const PurchasePage = () => {
   const purchaseData = useLoaderData();
-  console.log(purchaseData);
   const { user } = useContext(AuthContext);
   const { name, price, image, made_by, quantity } = purchaseData;
   const date = Date.now();
@@ -40,7 +39,7 @@ const PurchasePage = () => {
       made_by,
     };
 
-    fetch("http://localhost:5000/purchaseFood", {
+    fetch("https://ruchi-bangla-server.vercel.app/purchaseFood", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
