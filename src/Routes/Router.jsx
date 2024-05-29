@@ -14,6 +14,7 @@ import AddFood from "../Pages/AddFood/AddFood";
 import MyOrderFood from "../Pages/MyOrderFood/MyOrderFood";
 import GalleryCards from "../Pages/Gallery/GalleryCards";
 import UpdatedAddedFood from "../Pages/UpdatedAddedFood/UpdatedAddedFood";
+import Reservation from "../Pages/Reservation/Reservation";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "/gallery",
         element: <Gallery></Gallery>,
+      },
+      {
+        path: "/reservation",
+        element: <Reservation></Reservation>,
       },
       {
         path: "/login",

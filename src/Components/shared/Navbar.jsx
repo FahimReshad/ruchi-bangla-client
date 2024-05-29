@@ -40,6 +40,14 @@ const Navbar = () => {
           Gallery
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          className={({ isActive }) => (isActive ? "text-[#AD1A19]" : "")}
+          to="/reservation"
+        >
+          Reservation
+        </NavLink>
+      </li>
     </>
   );
   const buttonLink = (
