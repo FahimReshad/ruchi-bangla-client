@@ -20,8 +20,7 @@ const Reservation = () => {
       date,
       person,
     };
-    // fetch("https://ruchi-bangla-server.vercel.app/food", {
-    fetch("http://localhost:5000/reservation", {
+    fetch("https://ruchi-bangla-server.vercel.app/reservation", {
       method: "POST",
       headers: {
         "content-type": "application/json",
