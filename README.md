@@ -1,4 +1,5 @@
 Website Name: Ruchi Bangla
+
 Live site url:  https://ruchi-bangla.web.app/
 
 ## Project Overview
@@ -13,7 +14,7 @@ Ruchi Bangla is an online platform designed to bring the flavors of Bengali cuis
 - Secure user authentication and data encryption.
 
 ## Steps to Clone and Run Locally
-git clone https://github.com/your-username/ruchi-bangla.git
+git clone https://github.com/FahimReshad/ruchi-bangla-client.git
 
 cd ruchi-bangla
 
