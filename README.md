@@ -16,7 +16,7 @@ Ruchi Bangla is an online platform designed to bring the flavors of Bengali cuis
 ## Steps to Clone and Run Locally
 git clone https://github.com/FahimReshad/ruchi-bangla-client.git
 
-cd ruchi-bangla
+cd ruchi-bangla-client
 
 ## Install Dependencies:
 npm install
