@@ -12,7 +12,6 @@ import PrivateRoute from "./PrivateRoute";
 import MyAddedFood from "../Pages/MyAddedFood/MyAddedFood";
 import AddFood from "../Pages/AddFood/AddFood";
 import MyOrderFood from "../Pages/MyOrderFood/MyOrderFood";
-import GalleryCards from "../Pages/Gallery/GalleryCards";
 import UpdatedAddedFood from "../Pages/UpdatedAddedFood/UpdatedAddedFood";
 import Reservation from "../Pages/Reservation/Reservation";
 
