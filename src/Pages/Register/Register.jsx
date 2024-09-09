@@ -37,7 +37,7 @@ const Register = () => {
           />
         </div>
         <div className="card shrink-0 w-1/2 shadow-sm ">
-          <h1 className="text-4xl font-bold text-center mt-6 font-barlow text-[#dd5903]">
+          <h1 className="text-4xl font-bold text-center mt-6 font-barlow text-[#AD1A19]">
             Register Form
           </h1>
           <p className="text-center text-xl mt-4 font-barlow font-semibold">
@@ -93,7 +93,7 @@ const Register = () => {
               />
             </div>
             <div className="form-control mt-6">
-              <button className="btn bg-[#dd5903] text-white text-lg font-barlow">
+              <button className="btn bg-[#AD1A19] text-white text-lg font-barlow">
                 Register
               </button>
             </div>
