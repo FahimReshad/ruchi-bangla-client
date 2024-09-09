@@ -9,9 +9,9 @@ const Register = () => {
   const handleRegister = (e) => {
     e.preventDefault();
     const form = e.target;
-    const name = form.name.value;
+    // const name = form.name.value;
     const email = form.email.value;
-    const photoURL = form.photoURL.value;
+    // const photoURL = form.photoURL.value;
     const password = form.password.value;
 
     createUser(email, password)
