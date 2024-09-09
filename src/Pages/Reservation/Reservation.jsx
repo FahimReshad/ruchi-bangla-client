@@ -41,7 +41,7 @@ const Reservation = () => {
         <title>Ruchi Bangla || Reservation</title>
       </Helmet>
       <ReservationTitle></ReservationTitle>
-      <div className="flex gap-6 container mx-auto group text-[#AD1A19] md:mt-20">
+      <div className="flex gap-6 container mx-auto group text-[#AD1A19] md:my-20">
         <form onSubmit={handleBookFood} className="p-8 w-1/2">
           <h3 className="text-3xl pb-4 font-bold font-barlow uppercase">
             wish to taste it
