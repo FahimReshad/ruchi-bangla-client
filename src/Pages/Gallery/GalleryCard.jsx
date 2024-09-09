@@ -10,7 +10,7 @@ const GalleryCard = () => {
       });
   }, []);
   return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 container mx-auto gap-10">
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 container mx-auto gap-10 mb-10">
       {gallery.map((gall, index) => (
         <div
           key={index}
