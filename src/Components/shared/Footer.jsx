@@ -3,7 +3,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 const Footer = () => {
   return (
-    <footer className="px-4 divide-y bg-base-200 dark:text-white mt-14 lg:py-20">
+    <footer className="px-4 divide-y bg-base-200 dark:text-white">
       <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
         <div className="lg:w-[20%]">
           <a rel="noopener noreferrer" href="#" className="">
